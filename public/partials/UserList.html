@@ -1,0 +1,15 @@
+<div ng-controller='UserListController'>
+
+    <!--add user button-->
+    <button type="button">
+        <a href="#/AddUser">Add User</a>
+    </button>
+    <ul><!--show each user-->
+        <li ng-repeat="user in users">
+            <a class="title" href="#/UserDetails/{{user._id}}">{{user.name}}</a>
+            <!--<div>{{user.name}}</div>-->
+            <h3>{{user.email}}</h3>
+        </li>
+    </ul>
+
+</div>

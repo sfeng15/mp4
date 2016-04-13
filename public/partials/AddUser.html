@@ -1,0 +1,30 @@
+<div class="list" ng-controller='AddUserController'>
+    <div>Add user</div>
+    <form>
+        <div class="row">
+            <div class="small-12 columns">
+                <label>
+                    Name:
+                    <input ng-model="name" type="text"><!--have user input data-->
+                </label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <label>
+                    Email:
+                    <input ng-model="email" type="text" ><!--have user input data-->
+                </label>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button ng-click="setData()" class="button tiny info">Set Data</button><!--trigger post-->
+        </div>
+
+        {{name}}<!--display result-->
+        {{email}}<!--display result-->
+        {{response_message}}
+
+    </form>
+</div>

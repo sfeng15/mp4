@@ -1,24 +1,41 @@
 var app = angular.module('mp4', ['ngRoute', 'mp4Controllers', 'mp4Services']);
 
 app.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.
-    when('/firstview', {
-    templateUrl: 'partials/firstview.html',
-    controller: 'FirstController'
-  }).
-  when('/secondview', {
-    templateUrl: 'partials/secondview.html',
-    controller: 'SecondController'
-  }).
-  when('/settings', {
+  $routeProvider
+  .when('/UserList', {
+    templateUrl: 'partials/UserList.html',
+    controller: 'UserListController'
+  })
+  .when('/UserDetails/:id', {
+    templateUrl: 'partials/UserDetails.html',
+    controller: 'UserDetailsController'
+  })
+  .when('/AddUser', {
+    templateUrl: 'partials/AddUser.html',
+    controller: 'AddUserController'
+  })
+  .when('/TaskList', {
+    templateUrl: 'partials/TaskList.html',
+    controller: 'TaskListController'
+  })
+  .when('/TaskDetails', {
+    templateUrl: 'partials/TaskDetails.html',
+    controller: 'TaskDetailsController'
+  })
+  .when('/AddTask', {
+    templateUrl: 'partials/AddTask.html',
+    controller: 'AddTaskController'
+  })
+
+  .when('/EditTask', {
+    templateUrl: 'partials/EditTask.html',
+    controller: 'EditTaskController'
+  })
+  .when('/settings', {
     templateUrl: 'partials/settings.html',
     controller: 'SettingsController'
-  }).
-  when('/llamalist', {
-    templateUrl: 'partials/llamalist.html',
-    controller: 'LlamaListController'
-  }).
-  otherwise({
-    redirectTo: '/settings'
+  })
+  .otherwise({
+    redirectTo: '/UserList'
   });
 }]);
